@@ -1,4 +1,4 @@
-import { Controller } from "egg";
+import { Controller } from 'egg';
 // import ArticleInterFace from '../interface/article';
 
 export default class ArticleController extends Controller {
@@ -6,7 +6,7 @@ export default class ArticleController extends Controller {
    * 作用: 测试article路由存在的页面
    */
   public async index() {
-    this.ctx.body = await this.ctx.service.article.sayArticles("Article");
+    this.ctx.body = await this.ctx.service.article.sayArticles('Article');
   }
 
   /**
@@ -23,7 +23,7 @@ export default class ArticleController extends Controller {
     //   description: request.body.description,
     //   content: request.body.content,
     // };
-    console.log("---- createArticle params = ");
+    console.log('---- createArticle params = ');
     this.ctx.body = await this.ctx.service.article.createArticleInDB();
   }
 }
