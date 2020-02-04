@@ -61,7 +61,7 @@
   },
   "lint-staged": {
     "./app/**/*.ts": [
-      "node_modules/.bin/tslint ./app --fix",
+      "node_modules/.bin/eslint ./app --fix",
       "prettier --write ./app/**/*.{ts}",
       "git add ."
     ]
