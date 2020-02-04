@@ -1,6 +1,6 @@
 {
   "extends": "eslint-config-egg/typescript",
-  "plugins": ["prettier/prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
   },
