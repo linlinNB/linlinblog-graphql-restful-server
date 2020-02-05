@@ -16,7 +16,7 @@
     "test": "npm run lint -- --fix && npm run test-local",
     "cov": "egg-bin cov",
     "tsc": "ets && tsc -p tsconfig.json",
-    "ci": "npm run preformatts && npm run lint && npm run cov && npm run tsc",
+    "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "eslint . --ext .ts",
     "preformatts": "prettier ./**/*.ts --fix && prettier --write ./app/**/*.ts ./test/app/**/*.ts ./config/**/*.ts",
