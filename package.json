@@ -8,7 +8,7 @@
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-linlinblog-graphql-server",
+    "start": "egg-scripts start --title=egg-server-linlinblog-graphql-server",
     "stop": "egg-scripts stop --title=egg-server-linlinblog-graphql-server",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
