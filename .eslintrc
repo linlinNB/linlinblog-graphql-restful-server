@@ -4,7 +4,8 @@
   "rules": {
     "prettier/prettier": "error",
     "array-bracket-spacing": "off",
-    "@typescript-eslint/no-use-before-define": "off"
+    "@typescript-eslint/no-use-before-define": "off",
+    "quotes": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.json",
