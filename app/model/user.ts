@@ -1,21 +1,21 @@
 // import { Application } from 'egg';
-import BaseModel from "./BaseModel";
-import { ObjectType, Field } from "type-graphql";
-import { prop, getModelForClass } from "@typegoose/typegoose";
-import { ModelType } from "@typegoose/typegoose/lib/types";
+import BaseModel from './BaseModel';
+import { ObjectType, Field } from 'type-graphql';
+import { prop, getModelForClass } from '@typegoose/typegoose';
+import { ModelType } from '@typegoose/typegoose/lib/types';
 
 @ObjectType()
 export class User extends BaseModel {
   @prop({ required: true })
   @Field({
     nullable: true,
-    description: "名称"
+    description: '名称',
   })
   username?: string;
 
   @prop({ required: true })
   @Field({
-    description: "密码"
+    description: '密码',
   })
   password: string;
 
@@ -26,8 +26,8 @@ export class User extends BaseModel {
 
   public static async createUser(this: ModelType<User> & typeof User) {
     const user = await this.create({
-      username: "插件测试",
-      password: "插件测试"
+      username: '插件测试',
+      password: '插件测试',
     });
     return user;
   }

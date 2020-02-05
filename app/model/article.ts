@@ -8,16 +8,16 @@ export default app => {
   const acticleSchema = new Schema({
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
+      required: true,
     },
     content: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   });
-  return mongoose.model("Article", acticleSchema);
+  return mongoose.model('Article', acticleSchema);
 };

@@ -1,0 +1,1 @@
+    // "ci": "npm run lint && npm run cov && npm run tsc",

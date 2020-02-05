@@ -4,6 +4,7 @@ import { buildSchema } from 'type-graphql';
 import { ApolloServer } from 'apollo-server-koa';
 import { GraphQLSchema, GraphQLFormattedError, SourceLocation } from 'graphql';
 // tslint:disable-next-line:no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 export interface GraphQLConfig {
@@ -24,12 +25,7 @@ export default class GraphQL {
 
   getResolvers() {
     const baseProjectEnv = this.app.config.env === 'local';
-    return [
-      path.resolve(
-        this.app.baseDir,
-        `app/graphql/schema/**/*.${baseProjectEnv ? 'ts' : 'js'}`,
-      ),
-    ];
+    return [path.resolve(this.app.baseDir, `app/graphql/schema/**/*.${baseProjectEnv ? 'ts' : 'js'}`)];
   }
 
   async init() {
@@ -73,6 +69,6 @@ export default class GraphQL {
 class FormatError implements GraphQLFormattedError {
   message: string;
   locations?: readonly SourceLocation[] | undefined;
-  path?: readonly (string | number)[] | undefined;// eslint-disabled-line
+  path?: readonly (string | number)[] | undefined; // eslint-disabled-line
   extensions?: Record<string, any> | undefined;
 }
