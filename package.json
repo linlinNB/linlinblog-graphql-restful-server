@@ -19,6 +19,7 @@
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "eslint . --ext .ts",
+    "preformatts": "prettier --write ./app/**/*.ts ./test/app/**/*.ts ./config/**/*.ts",
     "clean": "ets clean"
   },
   "dependencies": {

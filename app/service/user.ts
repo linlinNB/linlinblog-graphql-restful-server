@@ -1,11 +1,11 @@
-import { Service } from "egg";
-import { UserModel } from "../model/User";
+import { Service } from 'egg';
+import { UserModel } from '../model/User';
 
 export default class UserService extends Service {
   public async add() {
     const result = await UserModel.create({
-      username: "林麟",
-      password: "卧槽"
+      username: '林麟',
+      password: '卧槽',
     });
     return result;
   }
@@ -13,7 +13,7 @@ export default class UserService extends Service {
   public async fetchAllUserList() {
     const { ctx } = this;
     const result = await ctx.model.User.find();
-    console.log("---- 查询所有的users = ", result);
+    console.log('---- 查询所有的users = ', result);
     return result;
   }
 }

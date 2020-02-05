@@ -9,13 +9,13 @@ export default (appInfo: EggAppInfo) => {
 
   config.cors = {
     origin: '*',
-    allowMethods: 'GET, HEAD, PUT, POST, DELETE, PATCH'
+    allowMethods: 'GET, HEAD, PUT, POST, DELETE, PATCH',
   };
 
   config.security = {
     csrf: {
       ignore: () => true,
-    }
+    },
   };
 
   // connect MongoDB
@@ -23,7 +23,7 @@ export default (appInfo: EggAppInfo) => {
     client: {
       url: 'mongodb://39.106.161.15:27017/test',
       options: {
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
       },
     },
   };
@@ -34,7 +34,7 @@ export default (appInfo: EggAppInfo) => {
     // agent: false,
     // graphiql: true,
     // 是否加载到 app 上，默认开启
-    dateScalarMode: 'timestamp'
+    dateScalarMode: 'timestamp',
     // // graphQL路由前拦截器
     // onPreGraphQL: function* (ctx) {
     //
@@ -43,15 +43,16 @@ export default (appInfo: EggAppInfo) => {
     // onPreGraphiQL: function* (ctx) {
     //
     // }
-  };config.cors = {
+  };
+  config.cors = {
     origin: '*',
-    allowMethods: 'GET, HEAD, PUT, POST, DELETE, PATCH'
+    allowMethods: 'GET, HEAD, PUT, POST, DELETE, PATCH',
   };
 
   config.security = {
     csrf: {
       ignore: () => true,
-    }
+    },
   };
 
   // connect MongoDB
@@ -59,7 +60,7 @@ export default (appInfo: EggAppInfo) => {
     client: {
       url: 'mongodb://39.106.161.15:27017/test',
       options: {
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
       },
     },
   };
@@ -70,7 +71,7 @@ export default (appInfo: EggAppInfo) => {
     // agent: false,
     // graphiql: true,
     // 是否加载到 app 上，默认开启
-    dateScalarMode: 'timestamp'
+    dateScalarMode: 'timestamp',
     // // graphQL路由前拦截器
     // onPreGraphQL: function* (ctx) {
     //

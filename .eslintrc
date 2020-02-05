@@ -2,9 +2,11 @@
   "extends": "eslint-config-egg/typescript",
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "array-bracket-spacing": "off",
+    "@typescript-eslint/no-use-before-define": "off"
   },
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
   }
 }

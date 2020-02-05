@@ -1,4 +1,4 @@
-import { Service } from "egg";
+import { Service } from 'egg';
 // import ArticleInterFace from '../interface/article';
 
 export default class ArticleService extends Service {
@@ -15,7 +15,7 @@ export default class ArticleService extends Service {
    */
   public async getAllArticlesList() {
     const allArticlesList = await this.ctx.model.Article.find();
-    console.log("---- 获取当前所有文章列表 = ", allArticlesList);
+    console.log('---- 获取当前所有文章列表 = ', allArticlesList);
     return allArticlesList;
   }
 
@@ -26,13 +26,11 @@ export default class ArticleService extends Service {
   public async createArticleInDB() {
     // 测试数据
     const testCreateArticleParams = {
-      title: "卧槽",
-      description: "一个测试",
-      content: "1111"
+      title: '卧槽',
+      description: '一个测试',
+      content: '1111',
     };
-    const createArticleInfo = await this.ctx.model.Article.create(
-      testCreateArticleParams
-    );
+    const createArticleInfo = await this.ctx.model.Article.create(testCreateArticleParams);
     return createArticleInfo;
   }
 }
