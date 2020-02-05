@@ -1,7 +1,8 @@
 FROM node:alpine
 WORKDIR /linlinblog_graphql_server
 COPY . /linlinblog_graphql_server/
-RUN npm i --production
+RUN npm install
+RUN npm run ci
 EXPOSE 7001
 CMD npm start
 
