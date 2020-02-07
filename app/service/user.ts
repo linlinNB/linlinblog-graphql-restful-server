@@ -11,8 +11,10 @@ export default class UserService extends Service {
   }
 
   public async fetchAllUserList() {
-    const { ctx } = this;
-    const result = await ctx.model.User.find();
+    // const { ctx } = this;
+    // console.log('--- ctx = ', ctx.model);
+    // const result = await ctx.model.user.find();
+    const result = await UserModel.find();
     console.log('---- 查询所有的users = ', result);
     return result;
   }

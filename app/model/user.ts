@@ -1,4 +1,3 @@
-// import { Application } from 'egg';
 import BaseModel from './BaseModel';
 import { ObjectType, Field } from 'type-graphql';
 import { prop, getModelForClass } from '@typegoose/typegoose';
