@@ -1,6 +1,6 @@
 import { Context } from 'egg';
 import { Ctx } from 'type-graphql';
-import { User, UserModel } from '../../model/User';
+import { User, UserModel } from '../../model/user';
 import { Resolver, Query, Mutation } from 'type-graphql';
 
 @Resolver(User)

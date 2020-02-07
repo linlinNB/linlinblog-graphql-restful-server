@@ -1,5 +1,5 @@
 import { Service } from 'egg';
-import { UserModel } from '../model/User';
+import { UserModel } from '../model/user';
 
 export default class UserService extends Service {
   public async add() {
