@@ -3,14 +3,13 @@
 
 import 'egg';
 import ExportBaseModel from '../../../app/model/BaseModel';
-import ExportUser = require('../../../app/model/User');
 import ExportArticle from '../../../app/model/article';
 import ExportUser from '../../../app/model/user';
 
 declare module 'egg' {
   interface IModel {
     BaseModel: ReturnType<typeof ExportBaseModel>;
-    User: ReturnType<typeof ExportUser>;
     Article: ReturnType<typeof ExportArticle>;
+    User: ReturnType<typeof ExportUser>;
   }
 }
