@@ -83,7 +83,14 @@ export default (appInfo: EggAppInfo) => {
   };
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = ['jwt'];
+
+  // 配置jwt中间件
+  config.jwt = {
+    match: '/api',
+    secret: 'my_token',
+    unless: ['/api/user/login'],
+  };
 
   // add your special config in here
   const bizConfig = {
