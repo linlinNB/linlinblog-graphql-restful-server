@@ -17,12 +17,6 @@ export default class ArticleController extends Controller {
   }
 
   public async createArticle() {
-    // const { ctx: { request } } = this;
-    // const params = {
-    //   title: request.body.description,
-    //   description: request.body.description,
-    //   content: request.body.content,
-    // };
     console.log('---- createArticle params = ');
     this.ctx.body = await this.ctx.service.article.createArticleInDB();
   }
