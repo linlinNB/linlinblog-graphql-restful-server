@@ -35,7 +35,3 @@ export class User extends BaseModel {
 const user = getModelForClass(User);
 
 export const UserModel = user;
-
-// export default (app: Application) => {
-//   return user;
-// }

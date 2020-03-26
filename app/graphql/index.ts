@@ -3,8 +3,6 @@ import { buildSchema } from 'type-graphql';
 // // 导入apollo，重构GraphQL的逻辑，抛弃原有的egg-graphql
 import { ApolloServer } from 'apollo-server-koa';
 import { GraphQLSchema, GraphQLFormattedError, SourceLocation } from 'graphql';
-// tslint:disable-next-line:no-var-requires
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 export interface GraphQLConfig {

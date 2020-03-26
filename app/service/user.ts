@@ -1,7 +1,7 @@
 import { Service } from 'egg';
 import { UserModel } from '../model/user';
 
-type LoginType = {
+type emailAndPwdParams = {
   username: string;
   password: string;
 };
@@ -21,9 +21,16 @@ export default class UserService extends Service {
     return result;
   }
 
-  public async findUserByPwd(params: LoginType) {
+  public async findUserByEmailAndPwd(params: emailAndPwdParams) {
     const { username, password } = params;
     const result = await UserModel.findOne({ username, password });
+    return result;
+  }
+
+  public async findUserByQrCode({ telephone }) {
+    console.log('---- 进入二维码扫描登录的service ---  = ', telephone);
+    const result = await UserModel.findOne({ telephone });
+    console.log('---- 二维码扫码查询结果 = ', result);
     return result;
   }
 }
